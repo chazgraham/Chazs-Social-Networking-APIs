@@ -4,6 +4,7 @@ const {
     getAllThoughts,
     getThoughtsById,
     addThoughts,
+    updateThoughts,
     removeThoughts,
     addReactions,
     removeReactions
@@ -13,7 +14,8 @@ router.route('/')
     .get(getAllThoughts);
 
 router.route('/:id')
-    .get(getThoughtsById);
+    .get(getThoughtsById)
+    .put(updateThoughts)
 
 router.route('/:userId').post(addThoughts);
 
