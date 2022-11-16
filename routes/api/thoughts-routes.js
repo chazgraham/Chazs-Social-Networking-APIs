@@ -17,12 +17,13 @@ router.route('/:id')
     .get(getThoughtsById)
     .put(updateThoughts)
 
+
 router.route('/:userId').post(addThoughts);
 
-router.route('/:userId/:thoughtId')
-    .put(addReactions)
-    .delete(removeThoughts)
+router.route('/:userId/:thoughtsId')
+  .put(addReactions)
+  .delete(removeThoughts)
 
-router.route('/:userId/:thoughtId/:reactionId').delete(removeReactions)
+router.route('/:userId/:thoughtsId/:reactionId').delete(removeReactions)
 
 module.exports = router;
